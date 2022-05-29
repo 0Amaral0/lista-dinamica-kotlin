@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="8dp"/>
+
+    <ImageView
+        android:id="@+id/img_app"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:srcCompat="@drawable/instagram_logo"
+        app:layout_constraintStart_toEndOf="@id/checkBox"
+        app:layout_constraintTop_toTopOf="@id/checkBox"
+        app:layout_constraintBottom_toBottomOf="@id/checkBox"
+        android:layout_marginStart="8dp"
+        android:layout_marginVertical="15dp"/>
+
+    <TextView
+        android:id="@+id/txt_nome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/img_app"
+        app:layout_constraintStart_toEndOf="@id/img_app"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:layout_marginHorizontal="15dp"
+        android:gravity="center_vertical"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:text="Nome do App" />
+
+    <TextView
+        android:id="@+id/txt_descricao"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/txt_nome"
+        app:layout_constraintTop_toBottomOf="@id/txt_nome"
+        app:layout_constraintBottom_toBottomOf="@id/img_app"
+        app:layout_constraintEnd_toEndOf="@id/txt_nome"
+        android:layout_marginTop="5dp"
+        android:text="Descrição do App"
+        android:maxLines="2"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
